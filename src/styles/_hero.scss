@@ -1,0 +1,64 @@
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(../images/supernatural_image_background.jpg);
+    text-align: center;
+    background-size: cover;
+
+    .button {
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
+
+    &__content {
+        max-width: 640px;
+
+        &__more {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            max-width: 320px;
+            margin: 0 auto 38px;
+        }
+
+        .link-text {
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: red;
+            border: 2px solid black;
+            transition: all 0.5s ease;
+            border-radius: 5%;
+
+            &:hover {
+                border: 2px solid rgb(0, 0, 0);
+                background-color: rgb(150, 0, 0);
+                padding: 15px 25px;
+            }
+        }
+
+        .title--small {
+            margin-bottom: 64px;
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-top: 60px;
+            }
+        }
+
+        &__combos {
+            display: flex;
+            justify-content: space-between;
+
+            &__combo {
+                width: calc(50% - 12px);
+                img {
+                    max-height: 100px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.header {
+    background-color: #E00900;
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        max-width: 80px;
+        width: 100%;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    &__links {
+        display: flex;
+
+        &__title {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            color: #fff;
+        }
+        
+        &__itens{
+
+            .button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 3%;
+                cursor: pointer;
+            }
+        }
+    }
+}

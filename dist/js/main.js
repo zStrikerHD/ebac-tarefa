@@ -1,0 +1,31 @@
+document.addEventListener("DOMContentLoaded",function(){var t=document.querySelectorAll(".shows__card");let i=null,n=document.createElement("div"),o=(n.className="overlay",n.id="overlay",n.style.cssText=`
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                background: rgba(0,0,0,0.7) !important;
+                z-index: 9998 !important;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease !important;
+            `,document.body.appendChild(n),document.createElement("button"));function a(){i&&(i.classList.remove("centered"),i=null),n.style.opacity="0",n.style.visibility="hidden",o.style.opacity="0",o.style.visibility="hidden",document.body.style.overflow="auto"}o.className="close-btn",o.id="closeBtn",o.innerHTML="&times;",o.style.cssText=`
+                position: fixed !important;
+                top: 20px !important;
+                right: 20px !important;
+                background: white !important;
+                color: #333 !important;
+                border: none !important;
+                border-radius: 50% !important;
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 20px !important;
+                cursor: pointer !important;
+                z-index: 10000 !important;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            `,document.body.appendChild(o),t.forEach(e=>{e.addEventListener("click",t=>{t.stopPropagation(),i===e?a():(t=e,i&&i.classList.remove("centered"),t.classList.add("centered"),n.style.opacity="1",n.style.visibility="visible",o.style.opacity="1",o.style.visibility="visible",i=t,document.body.style.overflow="hidden")})}),o.addEventListener("click",t=>{t.stopPropagation(),a()}),n.addEventListener("click",a),document.addEventListener("keydown",t=>{"Escape"===t.key&&i&&a()})});
